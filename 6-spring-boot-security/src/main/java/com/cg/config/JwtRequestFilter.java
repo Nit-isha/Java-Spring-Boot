@@ -1,4 +1,4 @@
-package com.capgemini.config;
+package com.cg.config;
 
 import java.io.IOException;
 
@@ -16,9 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.capgemini.secure.service.JwtUserDetailsService;
-
-import io.jsonwebtoken.ExpiredJwtException;
+import com.cg.secure.service.JwtUserDetailsService;
 
 @Component
 @CrossOrigin
@@ -47,9 +45,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 				catch (IllegalArgumentException e) {
 					System.out.println("Unable to get JWT Token");
 				} 
-				catch (ExpiredJwtException e) {
-					System.out.println("JWT Token has expired");
-				}
 				
 			} else {
 				logger.warn("JWT Token does not begin with Bearer String");

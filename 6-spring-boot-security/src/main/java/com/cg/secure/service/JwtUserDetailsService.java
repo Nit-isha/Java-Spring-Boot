@@ -1,4 +1,4 @@
-package com.capgemini.secure.service;
+package com.cg.secure.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,13 +8,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.capgemini.secure.model.User;
-import com.capgemini.secure.model.UserDto;
-import com.capgemini.secure.repository.UserRepository;
+import com.cg.secure.model.User;
+import com.cg.secure.model.UserDto;
+import com.cg.secure.repository.UserRepository;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
